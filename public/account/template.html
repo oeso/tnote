@@ -1,0 +1,33 @@
+
+<!-- include header -->
+<div ng-include="'header/header.html'"></div>
+<!-- //include header -->
+<!-- include lnb -->
+<div ng-include="'lnb/lnb.html'"></div>
+<!-- //include lnb -->
+
+<div class="account">
+    <div id="section" class="section">
+        <div>
+            <h1 class="section-title">Account Info</h1>
+            <p class="section-ment">Personal info in your facebook account</p>
+            <div ng-click="accountLoad()" class="account__call">Click to View</div>
+        </div>
+
+        <ul class="account-list">
+            <li class="account-photo"><img ng-src="{{picture}}" src="https://avatars3.githubusercontent.com/u/17796530?v=3&s=460" alt="" class="account-list-pic"> </li>
+            <li><span>last_name </span> {{last_name}}</li>
+            <li><span>first_name </span> {{first_name}}</li>
+            <li><span>email </span> {{email}}</li>
+            <li><span>gender </span> {{gender}}</li>
+            <li><span>age_range </span> {{age_range}}</li>
+            <li><span>nation </span> {{nation}}</li>
+            <!--<li>group  {{group}}</li>            -->
+            <li><span>likes </span> <span class="account-repeat" ng-repeat="likesItem in likes">{{likesItem.name}}</span></li>
+            <li><span>music </span> <span class="account-repeat" ng-repeat="item in music">{{item.name}}</span></li>
+            <li><span>link </span> <a ng-href={{linkss}} href="" class="account-link" target="_blank" title="새창열림">{{linkss}}</a></li>
+            <li class="account-coverpic"><span>cover picture </span> <img ng-src="{{cover}}"  src="" onerror="this.src=''" ></li>
+        </ul>
+        
+    </div>
+</div>

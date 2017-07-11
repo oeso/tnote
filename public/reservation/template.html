@@ -1,0 +1,58 @@
+
+<!-- include header -->
+<div ng-include="'header/header.html'"></div>
+<!-- //include header -->
+<!-- include lnb -->
+<div ng-include="'lnb/lnb.html'"></div>
+<!-- //include lnb -->
+
+<div class="reservation" ng-controller="reservation">
+    <section id="section" class="section">
+        <div>
+            <h1 class="reservation__title">Reservation</h1>
+            <p class="reservation__ment">Personal info in your facebook account</p>
+            <a href="" ng-click="accountLoad()" class="reservation__submit">제출</a>
+        </div>
+
+            <fieldset>
+                <div class="reservation__table">
+                    <ul class="reservation-list">
+                        <li><span>last_name </span>  <input type="text" class="reservation__inptxt" ng-model="reserve_name"></li>
+                        <li><span>first_name </span>  <input type="text" class="reservation__inptxt" ></li>
+                        <li><span>email </span> <input type="email" class="reservation__inptxt" ></li>
+                        <li><span>phone </span>
+                            <input type="tel" class="reservation__tel" value="010" >
+                            <input type="tel" class="reservation__tel" >
+                            <input type="tel" class="reservation__tel" >
+                        </li>
+                        <li><span>gender </span>
+                            <input type="radio" class="reservation__radio" id="male"> <label for="male" >male</label>
+                            <input type="radio" class="reservation__radio" id="female"> <label for="female" >female</label>
+                        </li>
+                        <li>
+                            <span>travel period</span>
+                            <input type="date" class="reservation__date" id="startday"> ~
+                            <input type="date" class="reservation__date" id="endday">
+                        </li>
+                        <li>
+                            <span>nation </span>
+                            <select name="" id="" class="reservation__select">
+                                <option value="">korea</option>
+                                <option value="">england</option>
+                                <option value="">japan</option>
+                                <option value="">china</option>
+                                <option value="">india</option>
+                            </select>
+                        </li>
+                        <li><span>country to visit </span> <input type="text" class="reservation__inptxt" ></li>
+                        <li><span>link </span> <input type="url" class="reservation__inptxt" ></li>
+                        <li><span>memo</span>
+                            <textarea name="" id="" cols="30" rows="10" class="reservation_textarea"></textarea>
+                        </li>
+                    </ul>
+                </div>
+
+            </fieldset>
+
+    </section>
+</div   >

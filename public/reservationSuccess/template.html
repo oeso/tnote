@@ -1,0 +1,37 @@
+
+<!-- include header -->
+<div ng-include="'header/header.html'"></div>
+<!-- //include header -->
+<!-- include lnb -->
+<div ng-include="'lnb/lnb.html'"></div>
+<!-- //include lnb -->
+
+<div class="reservation" ng-controller="reservation">
+    <section id="section" class="section">
+        <div>
+            <h1 class="reservation__title">Reservation</h1>
+            <p class="reservation__ment">Personal info in your facebook account</p>
+            <a href="" ng-href="#/reservation" class="reservation__submit">수정</a>
+            <div ng-click="reserv_share()" class="reservation__submit">Facebook 공유</div>
+        </div>
+
+        <fieldset>
+            <div class="reservation__table">
+                <ul class="reservation-list">
+                    <li><span>last_name </span> {{reserv_lastname}}</li>
+                    <li><span>first_name </span> {{reserv_firstname}}</li>
+                    <li><span>email </span> {{reserv_email}}</li>
+                    <li><span>phone </span> {{reserv_phonenumber}}</li>
+                    <li><span>gender </span> {{reserv_gender}}</li>
+                    <li><span>travel period</span> {{reserv_period}}</li>
+                    <li><span>nation </span> {{reserv_nation}}</li>
+                    <li><span>country to visit </span> {{reserv_country}}</li>
+                    <li><span>link </span> <a href="" ng-href="{{reserv_link}}">{{reserv_link}}</a></li>
+                    <li><span>memo</span> {{reserv_memo}}</li>
+                </ul>
+            </div>
+
+        </fieldset>
+
+    </section>
+</div>

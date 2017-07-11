@@ -1,0 +1,50 @@
+
+<!-- include header -->
+<div ng-include="'header/header.html'"></div>
+<!-- //include header -->
+<!-- include lnb -->
+<div ng-include="'lnb/lnb.html'"></div>
+<!-- //include lnb -->
+
+<div class="feedlist" ng-controller="feed">
+    <h1 class="hide">Feed list</h1>
+
+    <div id="section" class="feedlist__section">
+
+        <article class="feedlist__nav">
+            <h2 class="feedlist__nav--title">Feed list</h2>
+            <div ng-click="feedListLoad()" class="feedlist__call">View</div>
+
+            <!-- feed list repeat -->
+            <div class="feedlist__element">
+                <a href="" class="feedlist__item" ng-repeat="item in feeds" ng-click="feedOpen()">
+                    <h3 class="feedlist__item--title" >{{item.story}}</h3>
+                    <div class="feedlist__item--conts">{{item.message}}</div>
+                    <div class="feedlist__item--date">{{item.created_time}}</div>
+                </a>
+            </div>
+
+        </article>
+
+        <article class="feedlist__content">
+
+            <!-- 게시물 타이틀 -->
+            <h3 class="feedlist__content&#45;&#45;title">{{feedTitle}}</h3>
+            <div class="feedlist__content--date">{{feedDate}}</div>
+
+            <!-- 게시물 내용 -->
+            <!--<img class="feedlist__content&#45;&#45;img" src="https://www.joyent.com/content/blog/20150211-node-summit-2015-industrial-grade-nodejs/thumbnail.jpg" alt="">-->
+            <div class="feedlist__content--st">
+                {{feedContents}}
+
+                <!--This tutorial is specially designed to help you learn AngularJS as quickly and efficiently as possible.<br>-->
+
+                <!--First, you will learn the basics of AngularJS: directives, expressions, filters, modules, and controllers.<br>-->
+
+                <!--Then you will learn everything else you need to know about AngularJS:<br>-->
+
+                <!--Events, DOM, Forms, Input, Validation, Http, and more.-->
+            </div>
+        </article>
+    </div>
+</div>
